@@ -1,0 +1,258 @@
+.descr {
+  width: 50%;
+  font-size: 1rem;
+  text-align: justify;
+  text-indent: 50px;
+  padding: 30px;
+  padding-left: 60px;
+  border-radius: 25%;
+  box-shadow: 10px 5px 5px #43bcc7;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.border-bot {
+  border-bottom: solid 4px #43bcc7;
+  padding-bottom: 10px;
+}
+
+.container-triple {
+  height: 600px;
+  margin-top: 50px;
+}
+
+.part1 {
+  display: inline-block;
+  width: 50%;
+  background-image: url("../imgs/buff1.jpg");
+  background-repeat: no-repeat;
+  background-size: 450px 300px;
+  height: 300px;
+  background-position: right bottom;
+  z-index: -1;
+}
+
+.part3 {
+  display: inline-block;
+  width: 50%;
+  background-image: url("../imgs/buff2.jpg");
+  background-repeat: no-repeat;
+  background-size: 450px 300px;
+  height: 300px;
+  background-position: right top;
+  z-index: -1;
+  margin-top: -4px;
+}
+
+.part4 {
+  display: inline-block;
+  width: 50%;
+  background-image: url("../imgs/buff3.jpg");
+  background-repeat: no-repeat;
+  background-size: 450px 300px;
+  position: absolute;
+  height: 300px;
+  background-position: left top;
+  z-index: -1;
+  margin-top: -4px;
+}
+
+.part2 {
+  display: inline-block;
+  width: 450px;
+  position: absolute;
+  height: 300px;
+  z-index: -1;
+  padding: 10px;
+  font-size: 1.3em;
+  padding-top: 50px;
+  text-align: justify;
+  text-indent: 20px;
+}
+
+.pass {
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+.hidden {
+  display: none;
+}
+
+.part12 {
+  background-image: url("../imgs/buff2.jpg");
+  background-repeat: no-repeat;
+  background-size: 450px 300px;
+  height: 300px;
+  background-position: center;
+  z-index: -1;
+}
+
+.part22 {
+  z-index: -1;
+  padding: 30px;
+  font-size: 1.1em;
+  text-align: justify;
+  text-indent: 20px;
+}
+
+.part32 {
+  display: inline-block;
+  width: 50%;
+  background-image: url("../imgs/buff1.jpg");
+  background-repeat: no-repeat;
+  background-size: 450px 300px;
+  height: 300px;
+  background-position: right;
+  z-index: -1;
+}
+
+.part42 {
+  display: inline-block;
+  width: 50%;
+  background-image: url("../imgs/buff3.jpg");
+  background-repeat: no-repeat;
+  background-size: 450px 300px;
+  position: absolute;
+  height: 300px;
+  background-position: left;
+  z-index: -1;
+}
+
+.galerie {
+  max-width: 700px;
+  position: relative;
+  overflow: hidden;
+  height: 466px;
+  border: 5px solid white;
+  box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.5);
+  margin: auto;
+  margin-top: 30px;
+}
+
+.galerie2 {
+  max-width: 466px;
+  position: relative;
+  overflow: hidden;
+  height: 690px;
+  border: 5px solid white;
+  box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.5);
+  margin: auto;
+  margin-top: 30px;
+}
+
+.galerie ul,
+.galerie2 ul {
+  list-style-type: none;
+  position: relative;
+  margin: 0;
+}
+
+.galerie ul li,
+.galerie2 ul li {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: slideshow 9s ease infinite;
+  margin: 0;
+}
+
+.galerie ul li img,
+.galerie2 ul li img {
+  max-width: 100%;
+}
+
+.galerie ul li:nth-child(2),
+.galerie2 ul li:nth-child(2) {
+  animation-delay: 3s;
+}
+
+.galerie ul li:nth-child(3),
+.galerie2 ul li:nth-child(3) {
+  animation-delay: 6s;
+}
+
+@keyframes slideshow {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (min-width: 1300px) {
+  .container {
+    height: unset;
+    margin-top: unset;
+  }
+
+  .descr {
+    position: unset;
+    width: 70%;
+    font-size: 1.2rem;
+    margin: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .triple {
+    display: none;
+  }
+
+  .hidden {
+    display: block;
+  }
+
+  .container-triple {
+    height: unset;
+  }
+}
+
+@media (max-width: 850px) {
+  .descr {
+    display: block;
+    position: unset;
+    width: 100%;
+    padding-left: 30px;
+    margin-bottom: 30px;
+  }
+
+  .container {
+    height: unset;
+  }
+}
+
+@media (max-width: 700px) {
+  .galerie {
+    max-width: 300px;
+    height: 199px;
+  }
+
+  .galerie2 {
+    height: 290px;
+    max-width: 199px;
+  }
+}

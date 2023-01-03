@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="fr" ontouchmove>
+    
+<head>
+    <meta name="author" content="Bastien BARYLA">
+    <meta name="description" content="Site de lhotel Thouars">
+    
+   
+    <link rel="stylesheet" href="./styles/reservation.css">
+    <link rel="stylesheet" href="./styles/accueil.css">
+    <link rel="shortcut icon" href="./imgs/logo.jpg">
+    <!--<link rel="shortcut icon" href="./imgs/si.ico">-->
+    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8">
+    <title>Réservation</title>
+    </head>
+    
+    <body>
+        <header>
+          
+            
+          
+
+                <div class="logo"><a href="./index.html"><img src="./imgs/logo.png" alt="logo"></a></div>
+                <div class="navi">
+                    <div class="buton-cadre">
+                    <div class="buton lefting"><a href="./chambres.html" title="chambres">Chambres</a></div>
+                    <div class="buton"><a href="./Reservation.html" title="reservation">Réservation</a></div>
+                    <div class="buton righting"><a href="./Contact.html" title="contact">Contact</a></div>
+                    </div>
+                </div>
+                
+            
+        </header>
+        <main>
+         
+           <!-- <div class="warning"><div class="warningt">Pour de raisons indépendantes de notre volonté Lhotel ne sera pas en mesure d'accueillir de clients du 19 février au 28 février inclus. Nous vous remercions de votre compréhension et sommes impatients de vous revoir.</div><div class="signature">La direction de Lhotel</div></div> -->
+            <article>
+    <h1>Formulaire de réservation</h1>
+        <form action="reservation.php" method="post">
+            <section>
+         
+                <fieldset class="infos">
+                    <legend>Informations personelles</legend>
+                    
+                    <ul>
+                        <li><label for="type_1">Monsieur</label>
+                            <input type="radio" id="type_1" name="genre" value="Monsieur" required checked>
+                            </li>
+                        <li><label for="type_2">Madame</label>
+                            <input id="type_2" type="radio" name="genre" value="Madame" required></li>
+                    </ul>
+              
+                
+                    
+                <div><label for="nom">Nom<strong><abbr title="obligatoire">*</abbr></strong> : </label>
+                    <input type="text" id="nom" name="name_user" required>
+                    </div>
+                <div><label for="prenom">Prénom<strong><abbr title="obligatoire">*</abbr></strong> : </label>
+                    <input type="text" id="prenom" name="name_user2" required>
+                </div>
+                <div><label for="mail">Mail de contact :</label>
+                    <input type="email" id="mail" name="mail_user">
+                </div>
+                <div><label for="tel">Numéro de téléphone<strong><abbr title="obligatoire">*</abbr></strong> : </label>
+                    <input type="tel" id="tel" name="tel_user" required pattern="0[0-9][ -/]*[0-9]{2}[ -/]*[0-9]{2}[ -/]*[0-9]{2}[ -/]*[0-9]{2}">
+                    </div></fieldset>
+            </section>
+                <section>
+                    <fieldset class="infos">
+                        <legend>Informations de réservation</legend>
+                        <div class="chambre"><div id="menu_1" class="chamber point" onclick="openOne()">Chambre standard
+                           </div>
+                           <div class="chambre2" id="chambre2_2"><div class="chamber"><label for="choice_1_1_1">Chambre standard 1 nuit (68€ / nuit)</label>
+                            <input type="radio" id="choice_1_1_1" name="chambre" value="Chambre standard pour une nuit (68€)" onclick="minOne()" required></div>
+                            
+                        <div class="chamber"><label for="choice_1_1_2">Chambre standard 2 nuits (65€ / nuit)</label>
+                            <input id="choice_1_1_2" type="radio" name="chambre" value="Chambre standard pour deux nuits (65€)" onclick="minTwo()" required></div>
+                            
+                          <div class="chamber">  <label for="choice_1_1_3">Chambre standard 3 nuits (63€ / nuit)</label>
+                            <input type="radio" id="choice_1_1_3" name="chambre" value="Chambre standard pour trois nuits (63€)" onclick="minThree()" required></div>
+                        </div>
+                            
+                        <div class="chamber point" id="menu_2" onclick="openTwo()">Chambre supérieure
+                        </div>
+
+                        <div class="chambre3" id="chambre3_2"><div class="chamber"><label for="choice_2_1_1">Chambre supérieure 1 nuit (77€ / nuit)</label>
+                            <input type="radio" id="choice_2_1_1" name="chambre" value="Chambre supérieure pour une nuit (77€)" onclick="minOne()" required></div>
+                            
+                        <div class="chamber"><label for="choice_2_1_2">Chambre supérieure 2 nuits (73€ / nuit)</label>
+                            <input id="choice_2_1_2" type="radio" name="chambre" value="Chambre supérieure pour deux nuits (73€)" onclick="minTwo()" required></div>
+                            
+                          <div class="chamber">  <label for="choice_2_1_3">Chambre supérieure 3 nuits (68€ / nuit)</label>
+                            <input type="radio" id="choice_2_1_3" name="chambre" value="Chambre supérieure pour trois nuits (68€)" onclick="minThree()" required></div>
+                        </div>
+                            
+                          <div class="chamber point" id="menu_3" onclick="openThree()">Chambre supérieure XL
+                           </div>
+
+                           <div class="chambre4" id="chambre4_2"><div class="chamber"><label for="choice_3_1_1">Chambre supérieure XL 1 nuit (85€ / nuit)</label>
+                            <input type="radio" id="choice_3_1_1" name="chambre" value="Chambre supérieure XL pour une nuit (85€)" onclick="minOne()" required></div>
+                            
+                        <div class="chamber"><label for="choice_3_1_2">Chambre supérieure XL 2 nuits (80€ / nuit)</label>
+                            <input id="choice_3_1_2" type="radio" name="chambre" value="Chambre supérieure XL pour deux nuits (80€)" onclick="minTwo()" required></div>
+                            
+                          <div class="chamber">  <label for="choice_3_1_3">Chambre supérieure XL 3 nuits (77€ / nuit)</label>
+                            <input type="radio" id="choice_3_1_3" name="chambre" value="Chambre supérieure XL pour trois nuits (77€)" onclick="minThree()" required></div>
+                        </div>
+                            
+                        <div class="chamber point" id="menu_4" onclick="openFour()">Suite familiale
+                            </div>
+
+                            <div class="chambre5" id="chambre5_2"><div class="chamber"><label for="choice_4_1_1">Suite familiale 1 nuit (92€ / nuit)</label>
+                                <input type="radio" id="choice_4_1_1" name="chambre" value="Suite familiale pour une nuit (92€)" onclick="minOne()" required></div>
+                                
+                            <div class="chamber"><label for="choice_4_1_2">Suite familiale 2 nuits (88€ / nuit)</label>
+                                <input id="choice_4_1_2" type="radio" name="chambre" value="Suite familiale pour deux nuits (88€)" onclick="minTwo()" required></div>
+                                
+                              <div class="chamber">  <label for="choice_4_1_3">Suite familiale 3 nuits (83€ / nuit)</label>
+                                <input type="radio" id="choice_4_1_3" name="chambre" value="Suite familiale pour trois nuits (83€)" onclick="minThree()" required></div>
+                            </div>
+                        </div>
+                        <div class="chambre2" id="chambre2"><div class="chamber"><label for="choice_1_2_1">Chambre standard 1 nuit (68€ / nuit)</label>
+                            <input type="radio" id="choice_1_2_1" name="chambre" value="Chambre standard pour une nuit (68€)" onclick="minOne()" required></div>
+                            
+                        <div class="chamber"><label for="choice_1_2_2">Chambre standard 2 nuits (65€ / nuit)</label>
+                            <input id="choice_1_2_2" type="radio" name="chambre" value="Chambre standard pour deux nuits (65€)" onclick="minTwo()" required></div>
+                            
+                          <div class="chamber">  <label for="choice_1_2_3">Chambre standard 3 nuits (63€ / nuit)</label>
+                            <input type="radio" id="choice_1_2_3" name="chambre" value="Chambre standard pour trois nuits (63€)" onclick="minThree()" required></div>
+                        </div>
+
+                        <div class="chambre3" id="chambre3"><div class="chamber"><label for="choice_2_2_1">Chambre supérieure 1 nuit (77€ / nuit)</label>
+                            <input type="radio" id="choice_2_2_1" name="chambre" value="Chambre supérieure pour une nuit (77€)" onclick="minOne()" required></div>
+                            
+                        <div class="chamber"><label for="choice_2_2_2">Chambre supérieure 2 nuits (73€ / nuit)</label>
+                            <input id="choice_2_2_2" type="radio" name="chambre" value="Chambre supérieure pour deux nuits (73€)" onclick="minTwo()" required></div>
+                            
+                          <div class="chamber">  <label for="choice_2_3_3">Chambre supérieure 3 nuits (68€ / nuit)</label>
+                            <input type="radio" id="choice_2_3_3" name="chambre" value="Chambre supérieure pour trois nuits (68€)" onclick="minThree()" required></div>
+                        </div>
+
+                        <div class="chambre4" id="chambre4"><div class="chamber"><label for="choice_3_2_1">Chambre supérieure XL 1 nuit (85€ / nuit)</label>
+                            <input type="radio" id="choice_3_2_1" name="chambre" value="Chambre supérieure XL pour une nuit (85€)" onclick="minOne()" required></div>
+                            
+                        <div class="chamber"><label for="choice_3_2_2">Chambre supérieure XL 2 nuits (80€ / nuit)</label>
+                            <input id="choice_3_2_2" type="radio" name="chambre" value="Chambre supérieure XL pour deux nuits (80€)" onclick="minTwo()" required></div>
+                            
+                          <div class="chamber">  <label for="choice_3_2_3">Chambre supérieure XL 3 nuits (77€ / nuit)</label>
+                            <input type="radio" id="choice_3_2_3" name="chambre" value="Chambre supérieure XL pour trois nuits (77€)" onclick="minThree()" required></div>
+                        </div>
+
+                        <div class="chambre5" id="chambre5"><div class="chamber"><label for="choice_4_2_1">Suite familiale 1 nuit (92€ / nuit)</label>
+                            <input type="radio" id="choice_4_2_1" name="chambre" value="Suite familiale pour une nuit (92€)" onclick="minOne()" required></div>
+                            
+                        <div class="chamber"><label for="choice_4_2_2">Suite familiale 2 nuits (88€ / nuit)</label>
+                            <input id="choice_4_2_2" type="radio" name="chambre" value="Suite familiale pour deux nuits (88€)" onclick="minTwo()" required></div>
+                            
+                          <div class="chamber">  <label for="choice_4_2_3">Suite familiale 3 nuits (83€ / nuit)</label>
+                            <input type="radio" id="choice_4_2_3" name="chambre" value="Suite familiale pour trois nuits (83€)" onclick="minThree()" required></div>
+                        </div>
+                    </div>
+
+                    <p class="center"><em>La réservation de plusieurs nuits à des tarifs préferentiels concerne des nuits consécutives.</em></p>
+
+                       
+             <div><label for="nombreN"><span>Nombre de nuits<strong><abbr title="obligatoire">*</abbr></strong> : </span></label>
+                 <input type="number" id="nombreN" name="reser_num" min="1" max="30" value="1" required class="block"></div>
+            <div><label for="nombreA"><span>Nombre d'adultes<strong><abbr title="obligatoire">*</abbr></strong> : </span></label>
+                 <input type="number" id="nombreA" name="reser_persa" min="1" max="30" value="1" required class="block"></div>
+                        <div><label for="nombreC"><span>Nombre d'enfants<strong><abbr title="obligatoire">*</abbr></strong> : </span></label>
+                 <input type="number" id="nombreC" name="reser_perse" min="0" max="30" value="0" required class="block"></div>
+           
+            <div><label for="date"><span>Date de la réservation<strong><abbr title="obligatoire">*</abbr></strong> : </span></label>
+                    <input type="date" id="date" name="reser_date" value="" required class="block">
+                </div>
+                    <div>Présence d'animaux?</div>
+                    <ul>
+                        <li><label for="type_1">Non</label>
+                            <input type="radio" id="type_1" name="paws" value="non" checked required>
+                            </li>
+                        <li><label for="type_2">Oui</label>
+                            <input id="type_2" type="radio" name="paws" value="oui" required></li>
+                    </ul>
+                    
+                    <div class="center">Si oui, lesquels et combien?</div>
+                     <div><label for="msg" class="labcenter"></label>
+                <textarea id="msg" name="nimals"></textarea>
+            </div>
+                    
+                    </fieldset>
+   
+            
+                    <fieldset class="center">
+                        <legend>Commentaires ou questions supplémentaires</legend>
+            <div><label for="msg" class="labcenter"><span></span></label>
+                <textarea id="msg" name="commentary"></textarea>
+            </div>
+            <div class="g-recaptcha" data-sitekey="6LcowDAiAAAAAKGlXH5uw5yo9Mm-RWAMc3NkLVVo"></div>
+             <div class="button">
+                 <button type="submit">Envoyer la reservation</button>
+                 <button type="reset">Effacer le formulaire</button>
+            </div>
+                    </fieldset>
+            </section>
+        </form>
+        <p class="center"><em>Les champs "*" sont obligatoires.</em></p>
+                <p class="center"><em>Réservations dans la limite des disponibilités de l'établissement.</em></p>
+            </article>
+            
+            
+        </main>
+    
+        <footer>
+            <div><a href="./mentleg.html" title="mention legales">Mentions légales</a></div>
+        </footer>
+<script src="./scripts/jquery.js"></script>
+        <script src="./scripts/reser.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    </body>
+</html>

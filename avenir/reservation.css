@@ -1,0 +1,303 @@
+form {
+  width: 60%;
+  margin: auto;
+  text-align: right;
+  border: #49bcc7;
+}
+
+.title {
+  text-align: center;
+}
+
+form div {
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+button {
+  font-size: 1.1em;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px #43bcc7;
+}
+
+h1 {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+input {
+  font-size: 1.1em;
+}
+
+fieldset {
+  margin: 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+textarea {
+  width: 80%;
+  min-height: 200px;
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+}
+
+.dontlie {
+  display: none;
+}
+
+.chambre {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.chambre input {
+  display: block;
+  margin: auto;
+  margin-top: 4px;
+}
+
+.flexy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chambre > .chamber {
+  min-height: 40px;
+  background-color: #6acfd8;
+  font-size: 1em;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2px;
+  border: solid 2px #ae493b;
+  border-radius: 10%;
+  width: 20%;
+  padding: 2px;
+  box-shadow: 0px 0px 5px 4px #5ba2be;
+  align-items: center;
+}
+
+.chambre2,
+.chambre3,
+.chambre4,
+.chambre5 {
+  opacity: 0;
+  overflow: hidden;
+  max-height: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  top: -50px;
+}
+
+.chambre2.active,
+.chambre3.active,
+.chambre4.active,
+.chambre5.active {
+  opacity: 1;
+  max-height: 9999999px;
+  transform: translateY(50px);
+}
+
+.chambre2 > .chamber,
+.chambre3 > .chamber,
+.chambre4 > .chamber,
+.chambre5 > .chamber {
+  width: 30%;
+  position: relative;
+  min-height: 90px;
+  border: solid 2px black;
+  text-align: center;
+  box-shadow: 3px -1px 7px 1px #43bcc7;
+}
+
+.chambre2 input,
+.chambre3 input,
+.chambre4 input,
+.chambre5 input {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.warning {
+  color: red;
+  width: 40%;
+  margin: auto;
+  font-size: 1.2em;
+  text-align: justify;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  border: solid 2px red;
+  padding: 5px;
+}
+
+.signature {
+  text-align: right;
+  margin-top: 10px;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.point {
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#chambre2_2,
+#chambre3_2,
+#chambre4_2,
+#chambre5_2 {
+  display: block;
+  opacity: 0;
+  overflow: hidden;
+  max-height: 0;
+  position: absolute;
+}
+
+#chambre2_2.active,
+#chambre3_2.active,
+#chambre4_2.active,
+#chambre5_2.active {
+  position: unset;
+  opacity: 1;
+  max-height: 9999999px;
+  position: relative;
+}
+
+.bright {
+  filter: brightness(1.3);
+}
+
+@keyframes appear {
+  from {
+    height: 0px;
+  }
+
+  to {
+    height: 150px;
+  }
+}
+
+@keyframes appearSmart {
+  from {
+    height: 0px;
+  }
+
+  to {
+    height: 285px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .chambre2 > .chamber,
+  .chambre3 > .chamber,
+  .chambre4 > .chamber,
+  .chambre5 > .chamber {
+    min-height: 130px;
+    padding: 7px;
+  }
+
+  .chambre2 input,
+  .chambre3 input,
+  .chambre4 input,
+  .chambre5 input {
+    bottom: 10px;
+    transform: scale(1.5);
+  }
+}
+
+@media (max-width: 1150px) {
+  .warning {
+    width: unset;
+  }
+}
+
+@media (max-width: 1000px) {
+  form {
+    min-width: 90%;
+  }
+}
+
+@media (max-width: 800px) {
+  form {
+    text-align: center;
+  }
+  input {
+    max-width: 60%;
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  select {
+    font-size: 0.8em;
+  }
+  .chamber {
+    display: block;
+    width: 80%;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 700px) {
+  .chambre2 > .chamber,
+  .chambre3 > .chamber,
+  .chambre4 > .chamber,
+  .chambre5 > .chamber {
+    width: 80%;
+    margin: auto;
+    margin-top: 5px;
+  }
+
+  .chambre {
+    text-align: center;
+    display: block;
+  }
+
+  .chambre > .chamber {
+    min-height: 40px;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    width: 80%;
+    align-items: center;
+  }
+
+  .absolv {
+    position: relative;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+
+  .g-recaptcha {
+    transform: scale(0.9);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 320px) {
+  .infos,
+  .toobig {
+    min-inline-size: unset;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}

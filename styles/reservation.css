@@ -1,0 +1,421 @@
+@import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap");
+
+form {
+  width: 60%;
+  margin: auto;
+  text-align: right;
+  border: #49bcc7;
+}
+
+.title {
+  text-align: center;
+}
+
+form div {
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+button,
+.butthole {
+  font-size: 1.1em;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px #43bcc7;
+  display: block;
+  margin: auto;
+}
+
+.butthole {
+  width: 50%;
+  text-align: center;
+}
+
+.activable {
+  font-size: 1.3em;
+}
+
+h1 {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+input {
+  font-size: 1.1em;
+}
+
+fieldset {
+  margin: 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+textarea {
+  width: 80%;
+  min-height: 200px;
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+}
+
+.dontlie {
+  visibility: hidden;
+  position: absolute;
+}
+
+.chambre {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.chambre input {
+  display: block;
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.flexy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexyxy {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.flexyxy > * {
+  flex: 1 1 0;
+  text-align: center;
+}
+
+.blocky {
+  display: block;
+  font-size: 0.9rem;
+}
+
+.chambre > .chamber {
+  min-height: 40px;
+  background-color: #6acfd8;
+  font-size: 1em;
+  display: block;
+  margin: 2px;
+  border: solid 2px #ae493b;
+  border-radius: 10%;
+  width: 20%;
+  padding: 2px;
+  padding-top: 15px;
+  box-shadow: 0px 0px 5px 4px #5ba2be;
+  align-items: center;
+  position: relative;
+  padding-bottom: 15px;
+  font-weight: bold;
+}
+
+.warning {
+  color: red;
+  width: 40%;
+  margin: auto;
+  font-size: 1.2em;
+  text-align: justify;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  border: solid 2px red;
+  padding: 5px;
+}
+
+.signature {
+  text-align: right;
+  margin-top: 10px;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.point,
+.point > label,
+.point > input {
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.padinou > div:nth-child(3),
+.padinou > div:nth-child(4),
+.padinou > div:nth-child(5),
+.padinou > div:nth-child(6),
+.padinou > div:nth-child(7),
+.padinou > div:nth-child(8),
+.padinou > div:nth-child(9),
+.padinou > div:nth-child(10),
+.padinou > div:nth-child(11),
+.padinou > div:nth-child(12) {
+  margin-right: 30%;
+  width: fit-content;
+}
+
+.bordered {
+  padding: 8px;
+  border: 2px solid #43bcc7;
+  border-radius: 10px;
+}
+
+.yesorno {
+  background-color: #43bcc7;
+  border: 4px solid limegreen;
+  width: 60%;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px;
+  border-radius: 15px;
+  opacity: 0.7;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.3px;
+}
+
+.yesorno:hover {
+  opacity: 1;
+}
+
+.justify {
+  text-align: justify;
+}
+
+#noButYes {
+  background-color: greenyellow;
+  border: 1px black solid;
+  margin: 4px;
+  height: 55px;
+  padding: 3px;
+}
+
+#yesButNo {
+  background-color: #ae493b;
+  border: 1px solid black;
+  margin: 4px;
+  height: 55px;
+  padding: 3px;
+}
+
+#noButYes:hover,
+#yesButNo:hover {
+  cursor: pointer;
+}
+
+.multibutton {
+  position: relative;
+  height: 50px;
+}
+
+.infosTarifs {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.infosTarifs > span {
+  color: rgb(209, 54, 54);
+}
+
+.infosDates {
+  color: rgb(209, 54, 54);
+  font-style: italic;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.chosen {
+  filter: brightness(1.2);
+}
+
+#numberNightsTotal,
+#price {
+  font-size: 1.5rem;
+  color: rgb(209, 54, 54);
+  margin-right: 5px;
+}
+
+@media (min-width: 750px) {
+  .chambre > .chamber:nth-child(4) {
+    padding-top: 20px;
+  }
+}
+
+@media (min-width: 947px) {
+  .chambre > .chamber:nth-child(1) {
+    padding-top: 20px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .chambre > .chamber {
+    min-height: 100px;
+    padding-bottom: 10px;
+  }
+
+  form {
+    width: 80%;
+  }
+
+  .chambre input {
+    bottom: 10px;
+    transform: scale(1.5);
+  }
+}
+
+@media (min-width: 1100px) {
+  .chambre > .chamber {
+    min-height: 120px;
+  }
+
+  .chambre input {
+    bottom: 20px;
+  }
+  .chambre > .chamber:nth-child(1) {
+    padding-top: 20px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .chambre > .chamber {
+    min-height: 100px;
+  }
+  /* .chambre > .chamber:nth-child(1),
+  .chambre > .chamber:nth-child(4) {
+    padding-top: 7px;
+  } */
+}
+
+@media (max-width: 1150px) {
+  .warning {
+    width: unset;
+  }
+}
+
+@media (max-width: 1000px) {
+  form {
+    min-width: 90%;
+  }
+
+  .chambre > .chamber {
+    min-height: 120px;
+  }
+}
+
+@media (max-width: 800px) {
+  form {
+    text-align: center;
+  }
+  input {
+    max-width: 60%;
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  select {
+    font-size: 0.8em;
+  }
+  .chamber {
+    display: block;
+    width: 80%;
+    font-size: 1em;
+  }
+
+  .padinou > div:nth-child(3),
+  .padinou > div:nth-child(4),
+  .padinou > div:nth-child(5),
+  .padinou > div:nth-child(6),
+  .padinou > div:nth-child(7),
+  .padinou > div:nth-child(8),
+  .padinou > div:nth-child(9),
+  .padinou > div:nth-child(10),
+  .padinou > div:nth-child(11),
+  .padinou > div:nth-child(12) {
+    margin-right: unset;
+    width: unset;
+  }
+}
+
+@media (max-width: 700px) {
+  .chambre {
+    text-align: center;
+    display: block;
+  }
+
+  .chambre > .chamber {
+    margin: auto;
+    margin-top: 10px;
+    width: 60%;
+    align-items: center;
+    padding-top: 20px;
+    font-size: 1.4rem;
+  }
+
+  .chambre > .chamber input {
+    transform: scale(1.5);
+  }
+
+  .absolv {
+    position: relative;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+
+  .g-recaptcha {
+    transform: scale(0.9);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 548px) {
+  .chambre > .chamber {
+    min-height: 130px;
+  }
+
+  .chambre > .chamber input {
+    transform: scale(1.8);
+    bottom: 10px;
+  }
+
+  .yesorno {
+    width: 100%;
+  }
+  .multibutton {
+    height: 100px;
+  }
+  .padinounou {
+    margin: auto;
+    padding: 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .infos,
+  .toobig {
+    min-inline-size: unset;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .multibutton > * {
+    width: 100%;
+    margin-top: 20px;
+  }
+}

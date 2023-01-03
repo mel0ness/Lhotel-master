@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="fr" ontouchmove>
+    
+<head>
+    <meta name="author" content="Bastien BARYLA">
+    <meta name="description" content="Site de lhotel Thouars">
+    
+    <link rel="stylesheet" href="./styles/photo.css">
+   
+    <link rel="stylesheet" href="./styles/accueil.css">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <!--<link rel="shortcut icon" href="./imgs/si.ico">-->
+    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8">
+    <title>Galerie Photos</title>
+    </head>
+    
+    <body>
+        <header>
+            <script>function myFunction(imgs) {
+  // Get the expanded image
+  var expandImg = document.getElementById("expandedImg");
+  // Get the image text
+  var imgText = document.getElementById("imgtext");
+  // Use the same src in the expanded image as the image being clicked on from the grid
+  expandImg.src = imgs.src;
+  // Use the value of the alt attribute of the clickable image as text inside the expanded image
+  imgText.innerHTML = imgs.alt;
+  // Show the container element (hidden with CSS)
+  expandImg.parentElement.style.display = "block";
+                }</script>
+          
+<nav role="navigation">
+    <div id="menuToggle">
+    <input type="checkbox" />
+        
+    <span></span>
+    <span></span>
+    <span></span>
+
+         <ul id="menu">
+            
+      <li><a href="./Chambres.html" title="chambres">Chambres</a></li>
+      <li><a href="./Bar.html" title="bar">Bar</a></li>
+      <li><a href="./Reservation.html" title="reservation">Réservation</a></li>
+      <li><a href="./Contact.html" title="contact">Contact</a></li>
+             <li><a href="./index.html" title="retour accueil">Retour à l'accueil</a></li>
+  </ul>
+  </div>
+ 
+                
+               
+</nav>
+            <div class="logo"><a href="./index.html"><img src="./imgs/logo.png" alt="logo"></a></div>
+            
+        </header>
+        <main>
+         <article class="invisi">   
+            <div id="menuToggle">
+    <input type="checkbox" />
+        
+    <span></span>
+    <span></span>
+    <span></span>
+
+         <ul id="menu">
+            
+      <li><a href="./Chambres.html" title="chambres">Chambres</a></li>
+      <li><a href="./Bar.html" title="bar">Bar</a></li>
+      <li><a href="./Reservation.html" title="reservation">Réservation</a></li>
+      <li><a href="./Contact.html" title="contact">Contact</a></li>
+             <li><a href="./index.html" title="retour accueil">Retour à l'accueil</a></li>
+  </ul>
+  </div>
+            </article>
+<article class="padding">
+    
+   <div class="row">
+  <div class="column">
+      <div class="center"><img src="./imgs/gal1.png" alt="gal1" onclick="myFunction(this);"></div>
+  </div>
+  <div class="column">
+      <div class="center"><img src="./imgs/gal2.png" alt="gal2" onclick="myFunction(this);"></div>
+  </div>
+  <div class="column">
+      <div class="center"><img src="./imgs/gal3.png" alt="gal3" onclick="myFunction(this);"></div>
+  </div>
+  <div class="column">
+      <div class="center"><img src="./imgs/gal4.png" alt="gal4" onclick="myFunction(this);"></div>
+  </div>
+</div>
+
+<div class="container">
+ 
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+  <img id="expandedImg" style="width:100%">
+
+  <div id="imgtext"></div>
+    
+ 
+    
+</div>
+    
+    
+            </article>
+            
+            
+        </main>
+    
+        <footer>
+            
+        </footer>
+    </body>
+</html>

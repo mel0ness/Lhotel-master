@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="fr" ontouchmove>
+  <head>
+    <meta name="author" content="Bastien BARYLA" />
+    <meta name="description" content="Site de lhotel Thouars" />
+
+    <link rel="stylesheet" href="./styles/reservation.css" />
+    <link rel="stylesheet" href="./styles/accueil.css" />
+    <link rel="shortcut icon" href="./imgs/logo.jpg" />
+    <!--<link rel="shortcut icon" href="./imgs/si.ico">-->
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <title>Réservation</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <a href="./index.html"><img src="./imgs/logo.png" alt="logo" /></a>
+      </div>
+      <div class="navi">
+        <div class="buton-cadre">
+          <div class="buton lefting">
+            <a href="./chambres.html" title="chambres">Chambres</a>
+          </div>
+          <div class="buton">
+            <a href="./Reservation.html" title="reservation">Réservation</a>
+          </div>
+          <div class="buton righting">
+            <a href="./Contact.html" title="contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- <div class="warning"><div class="warningt">Notre système de réservations est actuellement en panne, vous pouvez néanmoins nous contacter par mail à l'adresse : lhotel.thouars@gmail.com</div><div class="signature">La direction de Lhotel</div></div> -->
+      <article>
+        <h1>Formulaire de réservation</h1>
+        <form action="reservation.php" method="post">
+          <section>
+            <fieldset class="infos padinounou">
+              <legend>Informations personelles</legend>
+
+              <ul>
+                <li>
+                  <label for="type1">Monsieur</label>
+                  <input
+                    type="radio"
+                    id="type1"
+                    name="genre"
+                    value="Monsieur"
+                    checked
+                    required
+                  />
+                </li>
+                <li>
+                  <label for="type2">Madame</label>
+                  <input
+                    id="type2"
+                    type="radio"
+                    name="genre"
+                    value="Madame"
+                    required
+                  />
+                </li>
+              </ul>
+
+              <div class="dontlie">
+                <label for="dontlie"
+                  >En quelle année est né Magellan?<strong
+                    ><abbr title="obligatoire">*</abbr></strong
+                  >
+                  :
+                </label>
+                <input type="number" id="dontlie" name="dontlie" />
+              </div>
+
+              <div>
+                <label for="nom"
+                  >Nom<strong><abbr title="obligatoire">*</abbr></strong> :
+                </label>
+                <input type="text" id="nom" name="name_user" required />
+              </div>
+              <div>
+                <label for="prenom"
+                  >Prénom<strong><abbr title="obligatoire">*</abbr></strong> :
+                </label>
+                <input type="text" id="prenom" name="name_user2" required />
+              </div>
+              <div>
+                <label for="mail">Mail de contact :</label>
+                <input type="email" id="mail" name="mail_user" />
+              </div>
+              <div>
+                <label for="tel"
+                  >Numéro de téléphone<strong
+                    ><abbr title="obligatoire">*</abbr></strong
+                  >
+                  :
+                </label>
+                <input
+                  type="tel"
+                  id="tel"
+                  name="tel_user"
+                  required
+                  pattern="0[0-9][ -/]*[0-9]{2}[ -/]*[0-9]{2}[ -/]*[0-9]{2}[ -/]*[0-9]{2}"
+                />
+              </div>
+            </fieldset>
+          </section>
+          <section>
+            <fieldset class="infos padinou">
+              <legend>Informations de réservation</legend>
+              <div class="chambre" id="chambreCover">
+                <div class="chamber point" id="allClick1">
+                  <label for="type_1">Chambre standard</label>
+                  <input
+                    type="radio"
+                    id="type_1"
+                    name="chambre"
+                    value="Chambre standard"
+                    checked
+                    required
+                  />
+                </div>
+
+                <div class="chamber point" id="allClick2">
+                  <label for="type_2">Chambre supérieure</label>
+                  <input
+                    id="type_2"
+                    type="radio"
+                    name="chambre"
+                    value="Chambre supérieure"
+                    required
+                  />
+                </div>
+
+                <div class="chamber point" id="allClick3">
+                  <label for="type_3">Chambre supérieure XL</label>
+                  <input
+                    type="radio"
+                    id="type_3"
+                    name="chambre"
+                    value="Chambre supérieure XL"
+                    required
+                  />
+                </div>
+
+                <div class="chamber point" id="allClick4">
+                  <label for="type_4">Suite familiale</label>
+                  <input
+                    id="type_4"
+                    type="radio"
+                    name="chambre"
+                    value="Suite familiale"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label for="nombreA"
+                  ><span
+                    >Nombre d'adultes<strong
+                      ><abbr title="obligatoire">*</abbr></strong
+                    >
+                    :
+                  </span></label
+                >
+                <input
+                  type="number"
+                  id="nombreA"
+                  name="reser_persa"
+                  min="1"
+                  max="30"
+                  value="1"
+                  required
+                  class="block changes"
+                />
+              </div>
+              <div>
+                <label for="nombreE"
+                  ><span
+                    >Nombre d'enfants<strong
+                      ><abbr title="obligatoire">*</abbr></strong
+                    >
+                    :
+                  </span></label
+                >
+                <input
+                  type="number"
+                  id="nombreE"
+                  name="reser_perse"
+                  min="0"
+                  max="30"
+                  value="0"
+                  required
+                  class="block"
+                />
+              </div>
+
+              <div>
+                <label for="date"
+                  ><span
+                    >Date d'arrivée<strong
+                      ><abbr title="obligatoire">*</abbr></strong
+                    >
+                    :
+                  </span></label
+                >
+                <input
+                  type="date"
+                  id="date"
+                  name="reser_datee"
+                  value=""
+                  required
+                  class="block changes"
+                />
+              </div>
+              <div>
+                <label for="date2"
+                  ><span
+                    >Date de départ<strong
+                      ><abbr title="obligatoire">*</abbr></strong
+                    >
+                    :
+                  </span></label
+                >
+                <input
+                  type="date"
+                  id="date2"
+                  name="reser_dates"
+                  value=""
+                  required
+                  class="block changes"
+                />
+              </div>
+              <div class="infosDates">
+                Attention, l'établissement est fermé entre le vendredi 30
+                décembre 2022 et le Premier Janvier 2023 (De plus certaines
+                dates sont déjà complètes par avances, vous pouvez les consulter
+                sur notre page de <a href="./tarifs.html">Grille Tarifaire</a>)
+              </div>
+              <div class="bordered">
+                Nombre de Nuits :
+                <span id="numberNightsTotal" name="nights">0</span>
+              </div>
+              <div class="bordered">
+                Prix de la réservation souhaitée (Hors petits-déjeuners) :
+                <span id="price" name="price">0</span>€
+              </div>
+              <div class="infosTarifs">
+                Pour plus d'informations sur le prix, vous pouvez consulter
+                notre grille tarifaire en cliquant
+                <span><a href="./tarifs.html">ici</a></span
+                >.
+              </div>
+              <div class="infosTarifs">
+                Le prix n'inclus pas la taxe de séjour.
+              </div>
+              <div class="bordered" id="nimalsCadre">
+                Présence d'animaux?
+                <ul>
+                  <li>
+                    <label for="type_11">Non</label>
+                    <input
+                      type="radio"
+                      id="type_11"
+                      name="paws"
+                      value="non"
+                      checked
+                      required
+                    />
+                  </li>
+                  <li>
+                    <label for="type_22">Oui</label>
+                    <input
+                      id="type_22"
+                      type="radio"
+                      name="paws"
+                      value="oui"
+                      required
+                    />
+                  </li>
+                </ul>
+              </div>
+
+              <div class="center">Si oui, lesquels et combien?</div>
+              <div>
+                <label for="msgNimal" class="labcenter"></label>
+                <textarea id="msgNimal" name="nimals"></textarea>
+              </div>
+            </fieldset>
+            <input type="hidden" name="nights" id="nightsHidden" />
+            <input type="hidden" name="price" id="priceHidden" />
+
+            <fieldset class="center">
+              <legend>Commentaires ou questions supplémentaires</legend>
+              <div>
+                <label for="msg" class="labcenter"><span></span></label>
+                <textarea id="msg" name="commentary"></textarea>
+              </div>
+            </fieldset>
+
+            <div class="absolv">
+              <button type="submit" disabled="disabled" id="btnImp2">
+                Veuillez accepter les cookies pour valider la réservation
+              </button>
+            </div>
+          </section>
+        </form>
+        <p class="center"><em>Les champs "*" sont obligatoires.</em></p>
+        <p class="center">
+          <em
+            >Réservations dans la limite des disponibilités de
+            l'établissement.</em
+          >
+        </p>
+      </article>
+
+      <div class="yesorno" id="yesorno">
+        <div class="justify">
+          En réservant sur ce site, je permets à Google d’utiliser mes
+          informations pour personnaliser mon expérience de navigation. En
+          acceptant je lui permets d’utiliser mes cookies.
+        </div>
+        <div class="flexyxy">
+          <div id="noButYes">Oui, je comprends et j'accepte.</div>
+          <div id="yesButNo">
+            Non, je refuse
+            <span class="blocky"
+              >(retour à l'accueil pour vous contacter par téléphone)</span
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div>
+        <a href="./mentleg.html" title="mention legales">Mentions légales</a>
+      </div>
+    </footer>
+    <script src="scripts/reser.js"></script>
+    <script src="./scripts/captcha.js"></script>
+  </body>
+</html>

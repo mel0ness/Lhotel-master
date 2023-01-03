@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fr" ontouchmove>
+    
+<head>
+    <meta name="author" content="Bastien BARYLA">
+    <meta name="description" content="Site de lhotel Thouars">
+    
+   
+    <link rel="stylesheet" href="./styles/contact.css">
+    <link rel="stylesheet" href="./styles/accueil.css">
+    <link rel="stylesheet" href="./styles/reservation.css">
+    <link rel="shortcut icon" href="./imgs/logo.jpg">
+    <!--<link rel="shortcut icon" href="./imgs/si.ico">-->
+    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8">
+    <title>Contact</title>
+    </head>
+    
+    <body>
+        <header>
+          
+
+            <div class="logo"><a href="./index.html"><img src="./imgs/logo.png" alt="logo"></a></div>
+            <div class="navi">
+                <div class="buton-cadre">
+                <div class="buton lefting"><a href="./chambres.html" title="chambres">Chambres</a></div>
+                <div class="buton"><a href="./Reservation.html" title="reservation">Réservation</a></div>
+                <div class="buton righting"><a href="./Contact.html" title="contact">Contact</a></div>
+                </div>
+            </div>
+            
+        </header>
+        <main>
+         
+<article>
+    
+    <div class="title"><h1>Demande de contact</h1></div>
+            <form action="contact.php" method="post">
+                <fieldset class="toobig padinounou">
+                    <legend class="legend">Informations du demandeur</legend>
+                    <div><label for="name">Nom<strong>*</strong> :</label>
+                        <input type="text" id="name" name="name" required></div>
+                    <div><label for="firname">Prénom<strong>*</strong> :</label>
+                        <input id="firname" type="text" name="first_name" required></div>
+                    <div><label for="email">Email<strong>*</strong> :</label>
+                        <input type="email" id="email" name="mail" required></div>
+                        <div class="dontlie"><label for="dontlie">En quelle année est né Magellan?<strong><abbr title="obligatoire">*</abbr></strong> : </label>
+                            <input type="number" id="dontlie" name="dontlie">
+                            </div>
+                </fieldset>
+                <fieldset class="toobig"><legend class="legend">Type de votre demande :</legend><label for="kind_demand"></label>
+                <select id="kind_demand" name="demand" required class="center">
+                        <option value="" selected>Veuillez choisir une option</option>
+                        <option>Contact commercial</option>
+                        <option>Demande d'information sur un service</option>
+                        <option>Demande d'information sur un produit</option>
+                        <option>Demande de rendez-vous</option>
+                        <option>Reclamation</option>
+                    </select>
+                </fieldset>
+                
+                <div>Message ou commentaire :</div>
+                <div><label for="commentaire"></label>
+                    <textarea id="commentaire" name="descr_demand" minlength="40" required rows="7" cols="57"></textarea></div>
+                    <div class="absolv">
+                
+                        <button type="submit" disabled="disabled" id="btnImp2">Veuillez accepter les cookies pour valider la demande</button>
+               </div>
+            </form>
+    
+    <p class="center"><em>Les champs "*" sont obligatoires.</em></p>
+            </article>
+            <div class="yesorno" id="yesorno">
+                <div class="justify">En réservant sur ce site, je permets à Google d’utiliser mes informations pour personnaliser mon expérience de navigation. En acceptant je lui permets d’utiliser mes cookies.
+                </div>
+                <div class="flexyxy">
+                <div id="noButYes">Oui, je comprends et j'accepte.</div>
+                <div id="yesButNo">Non, je refuse <span class="blocky">(retour à l'accueil pour vous contacter par téléphone)</span></div>
+                </div>
+            
+        </main>
+    
+        <footer>
+            <div><a href="./mentleg.html" title="mention legales">Mentions légales</a></div>
+        </footer>
+   
+        <script src="./scripts/captcha2.js"></script>
+    </body>
+</html>

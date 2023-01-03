@@ -1,0 +1,53 @@
+table {
+  margin: auto;
+  margin-top: 50px;
+}
+
+table,
+td,
+th {
+  border: solid 4px teal;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 5px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+th {
+  background-color: #43bcc7;
+}
+
+.special {
+  color: red;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.tableNormal {
+  position: relative;
+  display: table;
+}
+
+.smartphone {
+  display: none;
+  position: absolute;
+}
+
+.boldy {
+  font-weight: bold;
+}
+
+@media (max-width: 1000px) {
+  .tableNormal {
+    display: none;
+    position: absolute;
+  }
+  .smartphone {
+    display: table;
+    position: relative;
+  }
+}

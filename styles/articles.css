@@ -1,0 +1,350 @@
+@font-face {
+  font-family: "Oleo Script Swash Caps";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oleoscriptswashcaps/v13/Noaj6Vb-w5SFbTTAsZP_7JkCS08K-jCzDn_HAX2kSA.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotomono/v22/L0xoDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlnANW6Cpk.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+.fontleg {
+  font-family: "Roboto Mono", monospace;
+  font-size: 1em;
+}
+
+.blockent {
+  position: relative;
+  height: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+.arrowtxt {
+  position: absolute;
+  background: url("../imgs/arrowb.png") no-repeat right;
+  width: calc(50% + 210px);
+  height: 450px;
+  z-index: 1;
+}
+
+.imgunder {
+  background: url("../imgs/terr.jpg") no-repeat;
+  height: 450px;
+  width: calc(50%);
+  left: 50%;
+  position: absolute;
+}
+
+.imgunder2 {
+  margin: auto;
+  max-width: 100%;
+}
+
+.txtinimg {
+  padding-top: 7%;
+  padding-left: 20px;
+  padding-right: 100px;
+}
+
+.txtinimg2 {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 100px;
+}
+
+.paraph {
+  text-indent: 20px;
+  width: 40%;
+  margin: auto;
+  font-size: 1.2em;
+  text-align: justify;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  border-radius: 25% 10%;
+  border: solid #43bcc7 10px;
+  padding: 30px;
+}
+
+.paraphe {
+  text-indent: 20px;
+  width: 50%;
+  font-size: 1.4em;
+  text-align: justify;
+  letter-spacing: 1px;
+  display: inline-block;
+  height: 465px;
+  padding-top: 150px;
+}
+
+.paraphe2 {
+  text-indent: 20px;
+  margin: auto;
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-top: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #43bcc7;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+html {
+  width: 100%;
+}
+
+.marque {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #43bcc7;
+  font-size: 1.4em;
+}
+
+ul span.marque {
+  font-size: 1em;
+}
+
+.fcol1 {
+  height: 150px;
+  background-image: url("../imgs/wifi.png");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.fcol2 {
+  height: 150px;
+  background-image: url("../imgs/tele.png");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.fcol3 {
+  height: 150px;
+  background-image: url("../imgs/paws.png");
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.fcol4 {
+  height: 150px;
+  background-image: url("../imgs/bar.png");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center top;
+  font-size: 1rem;
+}
+
+.fcol5 {
+  height: 150px;
+  background-image: url("../imgs/canal.png");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.containflex {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100vw;
+  margin-left: -8px;
+  height: 150px;
+}
+
+.serv {
+  position: relative;
+  top: 100%;
+  transform: translateY(-100%);
+  text-align: center;
+  font-size: 1rem;
+}
+
+.devant img {
+  max-width: 50%;
+  margin-left: 25%;
+}
+
+.devante {
+  display: inline-block;
+  width: 45%;
+  height: 465px;
+  position: absolute;
+}
+
+.devante img {
+  max-height: 100%;
+  padding-left: 20px;
+}
+
+ul li {
+  margin-top: 10px;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.center {
+  text-align: center;
+  font-size: 0.6em;
+}
+
+.center2 {
+  text-align: center;
+  font-size: 1.3em;
+}
+
+.center2 > a {
+  font-style: italic;
+  font-weight: bold;
+  color: rgb(209, 54, 54);
+}
+
+.warning {
+  color: red;
+  width: 40%;
+  margin: auto;
+  font-size: 1.2em;
+  text-align: justify;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  border: solid 2px red;
+  padding: 5px;
+  border-radius: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.signature {
+  text-align: right;
+  margin-top: 10px;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.invisible {
+  display: none;
+}
+
+.justify {
+  text-align: justify;
+  padding-left: 2px;
+}
+
+@media (min-width: 2000px) {
+  .arrowtxt {
+    padding-left: 15%;
+  }
+}
+
+@media (min-width: 1630px) {
+  .txtinimg {
+    padding-left: 250px;
+  }
+
+  .txtinimg2 {
+    padding-left: 250px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .paraph {
+    width: unset;
+    text-align: center;
+  }
+
+  .warning {
+    width: unset;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 900px) {
+  .paraphe {
+    display: block;
+    height: unset;
+    width: 70%;
+    margin: auto;
+  }
+
+  .devante {
+    display: block;
+    height: unset;
+    width: 70%;
+    margin: auto;
+    position: unset;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .devante img {
+    max-height: unset;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .blockent {
+    display: none;
+  }
+
+  .invisible {
+    display: block;
+  }
+
+  .fontleg {
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .fcol1,
+  .fcol2,
+  .fcol3,
+  .fcol4,
+  .fcol5 {
+    background-size: 80%;
+    background-position: center;
+    height: 100px;
+    width: 20vw;
+  }
+
+  .serv {
+    display: none;
+  }
+  .devant img {
+    max-width: 100%;
+    margin-left: unset;
+  }
+
+  ul {
+    list-style-type: unset;
+  }
+
+  ul.nounset {
+    list-style-type: none;
+    padding-left: 0;
+  }
+}

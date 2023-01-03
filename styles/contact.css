@@ -1,0 +1,43 @@
+form {
+  max-width: 40%;
+  margin: auto;
+  text-align: right;
+  border: #49bcc7;
+}
+
+.title {
+  text-align: center;
+}
+
+form div {
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+select {
+  font-size: 1.2em;
+}
+
+button {
+  font-size: 1.2em;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px #43bcc7;
+}
+
+.youpi {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+}
+
+.back {
+  color: #43bcc7;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.3em;
+}
