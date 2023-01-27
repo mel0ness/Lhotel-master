@@ -22,7 +22,7 @@ th {
 }
 
 .special {
-  color: red;
+  color: rgb(160, 37, 37);
   font-weight: normal;
   font-style: italic;
 }
