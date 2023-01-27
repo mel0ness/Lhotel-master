@@ -277,7 +277,7 @@ btnImpo2.addEventListener("click", (e) => {
     alert(
       "L'établissement est fermé du 25 Février au 5 Mars, veuillez modifier vos dates"
     );
-  } else if (Date.parse(dateTwo) == Date.parse(dateTwo)) {
+  } else if (Date.parse(dateOne) === Date.parse(dateTwo)) {
     e.preventDefault();
     alert("Vos dates sont eronnées, elles doivent être différentes!");
   } else if (
