@@ -46,11 +46,11 @@ const completeCC = new Date("2023-06-17");
 
 //Dates et Formats de dates où certaines chambres ne sont plus disponnibles
 
-const onlyDOne = Date.parse("2023-08-12");
-const onlyDTwo = Date.parse("2023-08-20");
+// const onlyDOne = Date.parse("2023-08-12");
+// const onlyDTwo = Date.parse("2023-08-20");
 
-const onlyDoneA = new Date("2023-08-12");
-const onlyDoneB = new Date("2023-08-20");
+// const onlyDoneA = new Date("2023-08-12");
+// const onlyDoneB = new Date("2023-08-20");
 
 //________________
 
@@ -318,23 +318,23 @@ btnImpo2.addEventListener("click", (e) => {
       "L'établissement est complet à cette date : " +
         completeCC.toLocaleDateString("fr")
     );
-  } else if (
-    (Date.parse(dateOne) <= onlyDTwo &&
-      Date.parse(dateOne) >= onlyDOne &&
-      !roomOne.checked) ||
-    (Date.parse(dateTwo) <= onlyDTwo &&
-      Date.parse(dateTwo) >= onlyDOne &&
-      !roomOne.checked) ||
-    (Date.parse(dateTwo) > onlyDTwo &&
-      Date.parse(dateOne) < onlyDOne &&
-      !roomOne.checked)
-  ) {
-    e.preventDefault();
-    alert(
-      "L'établissement ne possède plus que des chambres standard du " +
-        onlyDoneA.toLocaleDateString("fr") +
-        " au " +
-        onlyDoneB.toLocaleDateString("fr")
-    );
+  // } else if (
+  //   (Date.parse(dateOne) <= onlyDTwo &&
+  //     Date.parse(dateOne) >= onlyDOne &&
+  //     !roomOne.checked) ||
+  //   (Date.parse(dateTwo) <= onlyDTwo &&
+  //     Date.parse(dateTwo) >= onlyDOne &&
+  //     !roomOne.checked) ||
+  //   (Date.parse(dateTwo) > onlyDTwo &&
+  //     Date.parse(dateOne) < onlyDOne &&
+  //     !roomOne.checked)
+  // ) {
+  //   e.preventDefault();
+  //   alert(
+  //     "L'établissement ne possède plus que des chambres standard du " +
+  //       onlyDoneA.toLocaleDateString("fr") +
+  //       " au " +
+  //       onlyDoneB.toLocaleDateString("fr")
+  //   );
   }
 });
