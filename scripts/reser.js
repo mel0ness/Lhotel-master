@@ -37,12 +37,12 @@ const dateClosedTwo = Date.parse("2023-03-05");
 //Dates et Formats de dates où Hotel complet
 
 const completeA = Date.parse("2023-05-27");
-const completeB = Date.parse("2023-06-10");
-const completeC = Date.parse("2023-06-17");
+// const completeB = Date.parse("2023-06-10");
+// const completeC = Date.parse("2023-06-17");
 
 const completeAA = new Date("2023-05-27");
-const completeBB = new Date("2023-06-10");
-const completeCC = new Date("2023-06-17");
+// const completeBB = new Date("2023-06-10");
+// const completeCC = new Date("2023-06-17");
 
 //Dates et Formats de dates où certaines chambres ne sont plus disponnibles
 
@@ -86,6 +86,7 @@ let diffNightsInterMoins =
 //____________
 
 dateArrival.addEventListener("change", () => {
+  dateDeparture.value = dateArrival.value;
   dateDeparture.setAttribute("value", dateArrival.value);
   dateDeparture.setAttribute("min", dateArrival.value);
 
@@ -298,43 +299,43 @@ btnImpo2.addEventListener("click", (e) => {
       "L'établissement est complet à cette date : " +
         completeAA.toLocaleDateString("fr")
     );
-  } else if (
-    (Date.parse(dateOne) <= completeB && Date.parse(dateOne) >= completeB) ||
-    (Date.parse(dateTwo) <= completeB && Date.parse(dateTwo) >= completeB) ||
-    (Date.parse(dateTwo) > completeB && Date.parse(dateOne) < completeB)
-  ) {
-    e.preventDefault();
-    alert(
-      "L'établissement est complet à cette date : " +
-        completeBB.toLocaleDateString("fr")
-    );
-  } else if (
-    (Date.parse(dateOne) <= completeC && Date.parse(dateOne) >= completeC) ||
-    (Date.parse(dateTwo) <= completeC && Date.parse(dateTwo) >= completeC) ||
-    (Date.parse(dateTwo) > completeC && Date.parse(dateOne) < completeC)
-  ) {
-    e.preventDefault();
-    alert(
-      "L'établissement est complet à cette date : " +
-        completeCC.toLocaleDateString("fr")
-    );
-  // } else if (
-  //   (Date.parse(dateOne) <= onlyDTwo &&
-  //     Date.parse(dateOne) >= onlyDOne &&
-  //     !roomOne.checked) ||
-  //   (Date.parse(dateTwo) <= onlyDTwo &&
-  //     Date.parse(dateTwo) >= onlyDOne &&
-  //     !roomOne.checked) ||
-  //   (Date.parse(dateTwo) > onlyDTwo &&
-  //     Date.parse(dateOne) < onlyDOne &&
-  //     !roomOne.checked)
-  // ) {
-  //   e.preventDefault();
-  //   alert(
-  //     "L'établissement ne possède plus que des chambres standard du " +
-  //       onlyDoneA.toLocaleDateString("fr") +
-  //       " au " +
-  //       onlyDoneB.toLocaleDateString("fr")
-  //   );
+    // } else if (
+    //   (Date.parse(dateOne) <= completeB && Date.parse(dateOne) >= completeB) ||
+    //   (Date.parse(dateTwo) <= completeB && Date.parse(dateTwo) >= completeB) ||
+    //   (Date.parse(dateTwo) > completeB && Date.parse(dateOne) < completeB)
+    // ) {
+    //   e.preventDefault();
+    //   alert(
+    //     "L'établissement est complet à cette date : " +
+    //       completeBB.toLocaleDateString("fr")
+    //   );
+    // } else if (
+    //   (Date.parse(dateOne) <= completeC && Date.parse(dateOne) >= completeC) ||
+    //   (Date.parse(dateTwo) <= completeC && Date.parse(dateTwo) >= completeC) ||
+    //   (Date.parse(dateTwo) > completeC && Date.parse(dateOne) < completeC)
+    // ) {
+    //   e.preventDefault();
+    //   alert(
+    //     "L'établissement est complet à cette date : " +
+    //       completeCC.toLocaleDateString("fr")
+    //   );
+    // } else if (
+    //   (Date.parse(dateOne) <= onlyDTwo &&
+    //     Date.parse(dateOne) >= onlyDOne &&
+    //     !roomOne.checked) ||
+    //   (Date.parse(dateTwo) <= onlyDTwo &&
+    //     Date.parse(dateTwo) >= onlyDOne &&
+    //     !roomOne.checked) ||
+    //   (Date.parse(dateTwo) > onlyDTwo &&
+    //     Date.parse(dateOne) < onlyDOne &&
+    //     !roomOne.checked)
+    // ) {
+    //   e.preventDefault();
+    //   alert(
+    //     "L'établissement ne possède plus que des chambres standard du " +
+    //       onlyDoneA.toLocaleDateString("fr") +
+    //       " au " +
+    //       onlyDoneB.toLocaleDateString("fr")
+    //   );
   }
 });
