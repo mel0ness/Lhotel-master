@@ -86,10 +86,11 @@ let diffNightsInterMoins =
 //____________
 
 dateArrival.addEventListener("change", () => {
-  dateDeparture.value = dateArrival.value;
-  dateDeparture.setAttribute("value", dateArrival.value);
-  dateDeparture.setAttribute("min", dateArrival.value);
-
+  if (dateDeparture.value < dateArrival.value) {
+    dateDeparture.value = dateArrival.value;
+    dateDeparture.setAttribute("value", dateArrival.value);
+    dateDeparture.setAttribute("min", dateArrival.value);
+  }
   dateOne = new Date(document.getElementById("date").value)
     .toISOString()
     .split("T")[0];
