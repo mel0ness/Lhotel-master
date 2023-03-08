@@ -31,8 +31,8 @@ const datePTwo = Date.parse("2022-12-26");
 
 //Dates de fermeture
 
-const dateClosedOne = Date.parse("2023-02-26");
-const dateClosedTwo = Date.parse("2023-03-05");
+// const dateClosedOne = Date.parse("2023-02-26");
+// const dateClosedTwo = Date.parse("2023-03-05");
 
 //Dates et Formats de dates où Hotel complet
 
@@ -265,34 +265,37 @@ const phpGet = () => {
 //Validation selon nuits complètes ou de fermetures!
 
 btnImpo2.addEventListener("click", (e) => {
-  if (
-    Date.parse(dateOne) <= dateClosedTwo &&
-    Date.parse(dateOne) >= dateClosedOne
-  ) {
-    e.preventDefault();
-    alert(
-      "L'établissement est fermé du 25 Février au 5 Mars, veuillez modifier vos dates"
-    );
-  } else if (
-    Date.parse(dateTwo) <= dateClosedTwo &&
-    Date.parse(dateTwo) >= dateClosedOne
-  ) {
-    e.preventDefault();
-    alert(
-      "L'établissement est fermé du 25 Février au 5 Mars, veuillez modifier vos dates"
-    );
-  } else if (Date.parse(dateOne) === Date.parse(dateTwo)) {
+  // if (
+  //   Date.parse(dateOne) <= dateClosedTwo &&
+  //   Date.parse(dateOne) >= dateClosedOne
+  // ) {
+  //   e.preventDefault();
+  //   alert(
+  //     "L'établissement est fermé du 25 Février au 5 Mars, veuillez modifier vos dates"
+  //   );
+  // } else if (
+  //   Date.parse(dateTwo) <= dateClosedTwo &&
+  //   Date.parse(dateTwo) >= dateClosedOne
+  // ) {
+  //   e.preventDefault();
+  //   alert(
+  //     "L'établissement est fermé du 25 Février au 5 Mars, veuillez modifier vos dates"
+  //   );
+  // }
+  if (Date.parse(dateOne) === Date.parse(dateTwo)) {
     e.preventDefault();
     alert("Vos dates sont eronnées, elles doivent être différentes!");
-  } else if (
-    Date.parse(dateTwo) > dateClosedTwo &&
-    Date.parse(dateOne) < dateClosedOne
-  ) {
-    e.preventDefault();
-    alert(
-      "L'établissement est fermé du 25 Février au 5 Mars, veuillez modifier vos dates"
-    );
-  } else if (
+  }
+  // else if (
+  //   Date.parse(dateTwo) > dateClosedTwo &&
+  //   Date.parse(dateOne) < dateClosedOne
+  // ) {
+  //   e.preventDefault();
+  //   alert(
+  //     "L'établissement est fermé du 25 Février au 5 Mars, veuillez modifier vos dates"
+  //   );
+  // }
+  else if (
     (Date.parse(dateOne) <= completeA && Date.parse(dateOne) >= completeA) ||
     (Date.parse(dateTwo) <= completeA && Date.parse(dateTwo) >= completeA) ||
     (Date.parse(dateTwo) > completeA && Date.parse(dateOne) < completeA)
